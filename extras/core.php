@@ -37,7 +37,7 @@ switch ($method) {
   case 'POST':
     $sql = "insert into `$table` set $set"; break;
   case 'DELETE':
-    $sql = "delete `$table` where id=$key"; break;
+    $sql = "delete from `$table` where id=$key"; break;
 }
 
 // execute SQL statement
@@ -46,7 +46,7 @@ $result = mysqli_query($link,$sql);
 // die if SQL statement failed
 if (!$result) {
   http_response_code(404);
-  die(mysqli_error());
+  die(mysqli_error($link));
 }
 
 // print results, insert id or affected row count

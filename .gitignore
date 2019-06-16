@@ -1,5 +1,3 @@
-.buildpath
-.project
-.settings/
-phpunit.phar
-tests/config.php
+composer.phar
+composer.lock
+.git
